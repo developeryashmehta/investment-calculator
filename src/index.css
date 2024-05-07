@@ -1,13 +1,88 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Roboto+Condensed:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  margin: 0;
+  font-family: "Quicksand", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(#667eea, #764ba2);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+#header {
+  text-align: center;
+}
+
+#header img {
+  height: 200px;
+  object-fit: contain;
+  background-color: transparent;
+}
+
+#user-input {
+  padding: 16px;
+  max-width: 500px;
+  margin: 32px auto;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #2c1859, #000000);
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+#user-input label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#user-input input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #667eea;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* Hide the number increase button */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+#result {
+  max-width: 1000px;
+  margin: 32px auto;
+  padding: 16px;
+  table-layout: auto;
+  border-spacing: 15px;
+  text-align: center;
+}
+
+#result thead {
+  font-size: 16px;
+  background: linear-gradient(180deg, #2c1859, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#result tbody {
+  font-size: 16px;
+}
+
+.center {
+  text-align: center;
 }
