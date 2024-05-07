@@ -17,17 +17,20 @@ function ShowCalculation({ data }) {
       </thead>
       <tbody>
         {result.map((yearData) => {
-            const toatlInterest = yearData.valueEndofYear - yearData.annualInvestment * yearData.year - initialInvestment;
-            const totalAmountInvested = yearData.valueEndofYear - toatlInterest;
-            return (
-                <tr key={yearData.year}>
-                    <td>{yearData.year}</td>
-                    <td>{numberFormatter.format(yearData.valueEndofYear)}</td>
-                    <td>{numberFormatter.format(yearData.interest)}</td>
-                    <td>{numberFormatter.format(toatlInterest)}</td>
-                    <td>{numberFormatter.format(totalAmountInvested)}</td>
-                </tr>
-            )
+          const toatlInterest =
+            yearData.valueEndofYear -
+            yearData.annualInvestment * yearData.year -
+            initialInvestment;
+          const totalAmountInvested = yearData.valueEndofYear - toatlInterest;
+          return (
+            <tr key={yearData.year}>
+              <td>{yearData.year}</td>
+              <td>{numberFormatter.format(yearData.valueEndofYear)}</td>
+              <td>{numberFormatter.format(yearData.interest)}</td>
+              <td>{numberFormatter.format(toatlInterest)}</td>
+              <td>{numberFormatter.format(totalAmountInvested)}</td>
+            </tr>
+          );
         })}
       </tbody>
     </table>
